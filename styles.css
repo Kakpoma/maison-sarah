@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e7c160;
+}
+
+.nav {
+  background: #e49292;
+  border-bottom: 1px solid #e0dcd5;
+  padding: 1rem 0;
+}
+
+.nav a{
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin: 0 0 1rem;
+  color: #333;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+.span.price{
+    color: green;
+}
+
+
+
+
