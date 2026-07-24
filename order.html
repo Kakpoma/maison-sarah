@@ -3,10 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order</title>
+  <link rel="stylesheet" href="styles.css">
+  <title>Pre-Order</title>
 </head>
 <body>
-    <strong><h1>Pre-Order form is coming soon!</h1></strong>
+  <header>
+    <h1>Welcome to Maison Sarah</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Contact</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Pre-Order Form</h1>
 
+    <form action="#" method="post" class="preorder">
+      <fieldset>
+        <legend>Who is picking up</legend>
+
+        <label for="name">Name <span aria-hidden="true">*</span></label>
+        <input id="name" name="name" type="text" class="field" placeholder="Your full name" required>
+
+        <label for="email">Email <span aria-hidden="true">*</span></label>
+        <input id="email" name="email" type="email" class="field" placeholder="you@example.com" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Pickup day & time</legend>
+
+        <div class="choice">
+          <input type="radio" id="pickup_sat" name="pickup_day" value="saturday" checked>
+          <label for="pickup_sat">Saturday</label>
+
+          <input type="radio" id="pickup_sun" name="pickup_day" value="sunday">
+          <label for="pickup_sun">Sunday</label>
+        </div>
+
+        <label for="pickup_time">Pickup time</label>
+        <select id="pickup_time" name="pickup_time" class="field">
+          <option>08:00</option>
+          <option>09:00</option>
+          <option>10:00</option>
+          <option>11:00</option>
+          <option>12:00</option>
+          <option>13:00</option>
+          <option>14:00</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your order</legend>
+
+        <div class="choice">
+          <input type="checkbox" id="prod_meatpie" name="products[]" value="meat_pie">
+          <label for="prod_meatpie">Meat pie</label>
+
+          <input type="checkbox" id="prod_fishpie" name="products[]" value="fish_pie">
+          <label for="prod_fishpie">Fish pie</label>
+
+          <input type="checkbox" id="prod_scones" name="products[]" value="scones">
+          <label for="prod_scones">Scones</label>
+        </div>
+
+        <div class="choice">
+          <input type="checkbox" id="prod_espresso" name="products[]" value="espresso">
+          <label for="prod_espresso">Espresso</label>
+
+          <input type="checkbox" id="prod_capp" name="products[]" value="cappuccino">
+          <label for="prod_capp">Cappuccino</label>
+
+          <input type="checkbox" id="prod_latte" name="products[]" value="latte">
+          <label for="prod_latte">Latte</label>
+        </div>
+
+        <div class="choice">
+          <input type="checkbox" id="prod_tiramisu" name="products[]" value="tiramisu">
+          <label for="prod_tiramisu">Tiramisu</label>
+
+          <input type="checkbox" id="prod_cheesecake" name="products[]" value="cheesecake">
+          <label for="prod_cheesecake">Cheesecake</label>
+
+          <input type="checkbox" id="prod_creme" name="products[]" value="creme_brulee">
+          <label for="prod_creme">Creme Brulee</label>
+        </div>
+
+        <label for="notes">Notes (allergies, requests)</label>
+        <textarea id="notes" name="notes" class="field" rows="4" placeholder="Any special requests or notes"></textarea>
+
+        <button type="submit" class="btn-submit">Place Pre-Order</button>
+      </fieldset>
+    </form>
+  </div>
 </body>
 </html>
